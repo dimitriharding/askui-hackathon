@@ -1,4 +1,5 @@
-import { aui } from '../helper/jest.setup';
+import { aui } from '../helper/vite.setup';
+import { describe, it } from 'vitest';
 
 describe('Xnapper', () => {
     it.skip('should take a screenshot using the "Take Screenshot Now" CTA', async () => {
