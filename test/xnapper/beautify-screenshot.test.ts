@@ -1,7 +1,7 @@
 import { describe, test, expect } from 'vitest';
 
 describe('Xnapper', () => {
-    test.skip('should detect and hide email with redact option', async ({ xnapper, aui }) => {
+    test('should detect and hide email with redact option', async ({ xnapper, aui }) => {
         // open file by using the App menu in the toolbar
         await xnapper.openFile('email-screenshot');
 
@@ -10,7 +10,7 @@ describe('Xnapper', () => {
         await aui.expect().text().withExactText('Redact email addresses (found 1)').exists().exec();
     });
 
-    test.skip('should reveal email on react toggle', async ({ aui }) => {
+    test('should reveal email on react toggle', async ({ aui }) => {
         // looks like I need to re-open the file in the show email mode
         //toggle redact option
         await aui.click().withText('Redact email addresses (found 1)').exec();
@@ -24,7 +24,7 @@ describe('Xnapper', () => {
         await aui.click().withText('Redact email addresses (found 1)').exec();
     });
 
-    test.skip('should be able to switch between presets', async ({ aui }) => {
+    test('should be able to switch between presets', async ({ aui }) => {
         await aui.click().textfield().withText('Your Preset').exec();
         await aui.click().withText('Default Preset').exec();
 
@@ -56,7 +56,7 @@ describe('Xnapper', () => {
         expect(image).toMatchImageSnapshot();
     });
 
-    test.skip('should be able to verify text in screenshot', async ({ aui }) => {
+    test('should be able to verify text in screenshot', async ({ aui }) => {
         await aui.expect().text().withExactText('Humanizing UI Automation').exists().exec();
     });
 });

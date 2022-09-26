@@ -13,6 +13,7 @@
   "devDependencies": {
     "@types/jest-image-snapshot": "^5.1.0",
     "askui": "^0.3.2",
+    "axios": "^0.27.2",
     "dotenv": "^16.0.2",
     "jest-image-snapshot": "^5.2.0",
     "node-notifier": "^10.0.1",

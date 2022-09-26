@@ -5,5 +5,6 @@ export default defineConfig({
         exclude: [...configDefaults.exclude],
         setupFiles: ['./test/helper/vite.setup.ts'],
         testTimeout: 60 * 1000 * 60,
+        reporters: ['default', './qualitywatcher-reporter.ts'],
     }
 })

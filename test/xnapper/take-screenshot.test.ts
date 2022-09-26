@@ -1,7 +1,13 @@
 import { aui } from '../helper/vite.setup';
-import { describe, it } from 'vitest';
+import { Xnapper } from '../../applicationObject/xnapper';
+import { describe, it, beforeAll } from 'vitest';
+
+let xnapper: Xnapper;
 
 describe('Xnapper', () => {
+    beforeAll(() => {
+        xnapper = new Xnapper(aui);
+    });
     it.skip('should take a screenshot using the "Take Screenshot Now" CTA', async () => {
         // Unable to hold and drag the slider
         await aui.click().button().withText('Take Screenshot Now').exec();
